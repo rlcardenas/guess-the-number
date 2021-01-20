@@ -2,6 +2,36 @@
   <body>
 
   <h1>Guess the Number!</h1>
+    
+
+  <script>
+      let guess = prompt("Guess a number between 1 and 100");
+      let num = Math.floor(Math.random() * 99);
+      //will turn true if correct number is given
+      let gotIt = false;
+      let counter = 0;
+      
+      while(gotIt === false){
+        counter++;
+        if(num == guess)
+        {//true - tell user and break out of loop
+            alert("Got it!");
+            gotIt = true;
+        }
+        else{ //false tell the yser to guess again
+            if(guess > num){
+                guess = prompt("Lower, try again");
+            } else{
+                guess = prompt("Higher, try again ")
+            }
+        }
+    }
+    alert("You got it!  You guessed " + guess + " and the number was " + num + ". You guessed " + counter + " times!");
+        
+
+    
+
+</script>
 
   </body>
 </html>
